@@ -49,8 +49,7 @@ E existe também o `not in` que checa se a substring não existe
 print("hello" not in "Hello World!")
 ```
 
-Além disso existem os métodos desse tipo de dado
-
+# Métodos Nativos
 ## `capitalize`
 ## `casefold`
 ## `center`

@@ -24,3 +24,4 @@
 [Warnings](https://docs.python.org/3/library/warnings.html#warning-categories) 
 [Python Import Warning](https://stackoverflow.com/questions/28047850/python-import-warning)
 [decorator](https://www.geeksforgeeks.org/python/decorators-in-python/)
+[funções nativas](https://docs.python.org/3/library/functions.html)

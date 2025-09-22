@@ -1,0 +1,4 @@
+# Métodos Nativos
+
+## `count`
+## `index`

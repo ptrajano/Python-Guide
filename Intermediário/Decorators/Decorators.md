@@ -187,6 +187,7 @@ c.radius = 10
 print(c.area)
 ```
 
+Neste caso, também aparece os decorators das propertys, eles são os decorators que estão relacionados aos [[Dunder | dunders]], [[Dunder#`__setattr__` | __setattr__]] e [[Dunder#`__getattr__` | __getattr__]], neste caso o `__getattr__` não está definido mas o seu funcionamento é parecido, nele ele checa se ao tentar modificar o valor do `radius` se o valor é válido (positivo).
 ## Múltiplos decorators
 
 A questão principal é entender que a ordem é muito importante para isso, obviamente, dessa forma é preciso entender que se fizermos o seguinte decorator a ordem das funções é 

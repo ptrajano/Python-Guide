@@ -24,7 +24,8 @@ raise NewException("This is a new exception example")
       ├── [[#AttributeError]]
       ├── [[#BufferError]]
       ├── [[#EOFError]]
-      ├── ExceptionGroup [BaseExceptionGroup]
+      ├── [[#EnvironmentError]]
+	  ├── ExceptionGroup [BaseExceptionGroup]
       ├── [[#ImportError]]
       │    └── [[#ModuleNotFoundError]]
       ├── [[#LookupError]]
@@ -138,6 +139,10 @@ Chamada por input quado uma `EOF` (End of File) é chamada, o `EOF` é diferente
 ```python
 input() # Press Ctrl + D or Ctrl + Z depending on the system
 ```
+
+## EnvironmentError
+
+
 
 ### `FloatingPointError`
 
