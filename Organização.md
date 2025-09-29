@@ -35,6 +35,7 @@
 	- [x] Error and exceptions
 		- [x] Try/Except/Finally
 		- [x] Discussão
+	- [x] Context Manager
 	- [ ] Classes
 		- [ ] Escopos e namespaces
 		- [ ] Define
@@ -45,11 +46,13 @@
 		- [ ] Polimorphism
 		- [ ] Composition
 		- [ ] MetaClass
-		- [ ] Variáveis privadas
+		- [x] Variáveis privadas
 		- [ ] Dunder
-	- [ ] Iterators and Generators
+	- [x] Iterators and Generators
 	- [ ] Assync
-	- [ ] Walrus Operator
+	- [x] Walrus Operator
+	- [x] Ellipsis
+	- [ ] GIL
 - [ ] Avançado (1 aulas)
 	- [ ] Design Patterns
 	- [ ] Estruturas de dados avançadas
@@ -59,6 +62,8 @@
 		- [ ] Grafo
 		- [ ] Octa-Tree
 	- [ ] Boas práticas
+		- [ ] SOLID
+		- [ ] typing
 	- [ ] Desenvolvimento de projeto
 
 
