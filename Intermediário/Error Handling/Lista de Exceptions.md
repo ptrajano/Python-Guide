@@ -66,7 +66,7 @@ raise NewException("This is a new exception example")
       │    └── [[#UnicodeError]]
       │         ├── [[#UnicodeDecodeError]]
       │         ├── [[#UnicodeEncodeError]]
-      │         └── [[#UnicodeTranslateError]
+      │         └── [[#UnicodeTranslateError]]
       └── [[#Warning]]
            ├── [[#BytesWarning]]
            ├── [[#DeprecationWarning]]

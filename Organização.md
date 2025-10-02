@@ -1,14 +1,15 @@
 
 - [ ] Básico (2 aulas)
 	- [ ] Baixar e Rodar scripts
-	- [ ] Palavras reservadas
-	- [ ] Inputs e outputs
+	- [x] Palavras reservadas
+	- [x] Inputs e outputs
 	- [ ] Tipos de dados
 		- [ ] string
-		- [ ] bool
-		- [ ] int
-		- [ ] float
-		- [ ] complex
+		- [x] bool
+		- [x] int
+		- [x] float
+		- [x] complex
+		- [ ] bytes
 	- [ ] Control Flow
 		- [ ] If/elif/else
 		- [ ] for
@@ -22,9 +23,9 @@
 		- [ ] lambda
 	- [ ] Estruturas de Dados
 		- [ ] List
-		- [ ] tuples
+		- [x] tuples
 		- [ ] dicts
-		- [ ] sets
+		- [x] sets
 		- [ ] List comprehension
 	- [ ] Imports
 		- [ ] Bibliotecas padrões

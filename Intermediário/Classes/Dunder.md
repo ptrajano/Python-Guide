@@ -432,7 +432,7 @@ O output é o mesmo, mas a escrita é mais simples, porém perde na portabilidad
 Por último é importante ressaltar que se `__str__` não estiver implementado o `__repr__` é chamado nas funcionalidades do `__str__`, mas o caso contrário não ocorre ([`__str__ vs __repr__`](https://stackoverflow.com/questions/1436703/what-is-the-difference-between-str-and-repr#2626364)).
 ## `__bool__`
 
-Esse dunder é simples, o intuito dele é criar o significado de `bool(classe)`
+Esse dunder é simples, o intuito dele é criar o significado de `bool(classe)` [[Funções Nativas#bool|bool]]
 
 ```python
 class Bit:
@@ -445,7 +445,7 @@ class Bit:
 
 ## `__int__`
 
-Esse dunder implementa o `int(classe)`
+Esse dunder implementa o `int(classe)` [[Funções Nativas#int|int]]
 
 ```python
 class Bit:
@@ -459,7 +459,7 @@ class Bit:
 
 ## `__float__`
 
-Esse dunder implementa o `float(classe)`
+Esse dunder implementa o `float(classe)` [[Funções Nativas#float|float]]
 
 ```python
 class Bit:
@@ -473,14 +473,49 @@ class Bit:
 
 ## `__bytes__`
 
+Esse dunder implementa o `bytes(classe)` [[Funções Nativas#bytes|bytes]]
+
+```python
+class Bit:
+	def __init__(self, state: bool) -> None:
+		self.state = state
+		
+	def __bytes__(self) -> bytes:
+		return bytes(state)
+
+```
+
 ## `__complex__`
+
+Esse dunder implementa o `complex(classe)` [[Funções Nativas#complex|complex]]
+
+```python
+class Bit:
+	def __init__(self, state: bool) -> None:
+		self.state = state
+		
+	def __complex__(self) -> complex:
+		return complex(state)
+
+```
 
 ## `__format__`
 # Gerenciador de contexto
 
+Esses dunders geram o comportamento do [[Gerenciador de Contexto]] em classe, deixando fazer
+
+```python
+with Class as c:
+	...
+```
+
 ## `__enter__`
 
+Esse daqui implementa o que precisa fazer ao entrar no gerenciador de contexto
+
 ## `__exit__`
+
+Esse daqui implementa o que precisa fazer ao sair no gerenciador de contexto
 
 # Coleção
 

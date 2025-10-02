@@ -30,25 +30,6 @@ print(string[6])
 
 O comportamento é igual ao de lista (LINK LINK LINK), por causa disso é possível usar conceitos de lista como slicing (LINK LINK LINK)
 
-Para fazer um loop (LINK LINK LINK) na lista é possível usar a função `range` ou de uma forma mais "pythonica" 
-
-```python
-for x in "banana":
-	print(x)
-```
-
-Além disso a palavra `in` checa se existe uma substring dentro da string base, ou seja
-
-```python
-print("Hello" in "Hello World!")
-```
-
-E existe também o `not in` que checa se a substring não existe
-
-```python
-print("hello" not in "Hello World!")
-```
-
 # Métodos Nativos
 ## `capitalize`
 ## `casefold`

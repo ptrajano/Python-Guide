@@ -149,7 +149,7 @@ except:
 
 ## finally
 
-Tem q ve acho q tem no for e while além do try e except
+A palavra têm utilidades diferentes dependendo de onde é chamada [[Try and Except]],  for (LINK LINK LINK) e while (LINK LINK LINK)
 
 ## for
 
