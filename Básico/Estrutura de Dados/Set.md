@@ -12,9 +12,11 @@ print(my_set)
 
 # Operações 
 
-As operações que podem ser feitas com o `set`, são operações de conjunto
+As operações que podem ser feitas com o `set`, são operações de conjunto e de comparação
 
-## União
+
+## Operações de Conjunto
+### União
 
 Usando o símbolo `|` gera o mesmo comportamento de [[#`union`|union]]. Aonde ele cria um novo set que terá todos os elementos que estão em ambos os `set`.
 
@@ -28,7 +30,7 @@ my_set = my_set_01 | my_set_02
 print(my_set)
 ```
 
-## Interseção
+### Interseção
 
 Usando o símbolo `&` gera o mesmo comportamento de [[#`intersection`|intersection]]. Aonde ele cria um novo set que terá somente os elementos que estão em ambos os `set`.
 
@@ -42,7 +44,7 @@ my_set = my_set_01 & my_set_02
 print(my_set)
 ```
 
-## Diferença
+### Diferença
 
 Esta operação retorna apenas os elementos que estão somente no primeiro `set` e não estão no segundo.
 
@@ -58,7 +60,7 @@ print(my_set)
 
 Perceba que essa operação não é comutativa, ou seja, a ordem da operação importa `my_set_01 - my_set_02 != my_set_02 - my_set_01`. Além disso é idêntico ao método [[#`difference`|difference]].
 
-## Diferença Simétrica
+### Diferença Simétrica
 
 Essa operação são todos os elementos que não estão na interseção dos dois conjuntos.
 
@@ -85,6 +87,36 @@ print(my_set)
 ```
 
 Além disso é idêntico ao método [[#`symmetric_difference`|symmetric_difference]].
+
+## Operações de Comparação 
+
+### Igualdade
+
+O símbolo de comparação de igualdade `==` compara se conjuntos contém a mesma quantidade de elementos, e se todos seus elementos são iguais. Além disso, para todo objeto nativo do `python`, o retorno da igualdade entre um `set` e esse é objeto será negativo.
+Já o `!=` responde se dois objetos não são iguais.
+
+```python
+print({1, 2, 3} == {2, 3, 1}) # True ordem não importa
+```
+
+### Desigualdades 
+
+As desigualdades, nesse contexto fazem o papel de subconjunto, ou seja elas comparam dois 
+`set` e comparam se um está contido dentro do outro
+
+```python
+a = {1, 2, 3}
+b = {1, 2}
+c = {1, 2, 3, 4}
+
+# Subconjunto próprio
+print(b < a)   # True (b é subconjunto próprio de a)
+print(b <= a)  # True (b é subconjunto de a)
+
+# Superconjunto próprio
+print(c > a)   # True (c é superconjunto próprio de a)
+print(c >= a)  # True (c é superconjunto de a)
+```
 # Métodos Nativos
 
 ## `add`

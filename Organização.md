@@ -10,26 +10,27 @@
 		- [x] float
 		- [x] complex
 		- [ ] bytes
-	- [ ] Control Flow
-		- [ ] If/elif/else
-		- [ ] for
-		- [ ] match
-		- [ ] pass
-	- [ ] Funções
-		- [ ] def
-		- [ ] recurssão
-		- [ ] Default argument
-		- [ ] args, kwargs
-		- [ ] lambda
-	- [ ] Estruturas de Dados
-		- [ ] List
+	- [x] Control Flow
+		- [x] If/elif/else
+		- [x] for
+		- [x] match
+		- [x] while
+	- [x] Funções
+		- [x] def
+		- [x] recurssão
+		- [x] Default argument
+		- [x] args, kwargs
+		- [x] lambda
+		- [x] Funções Internas
+	- [x] Estruturas de Dados
+		- [x] List
 		- [x] tuples
-		- [ ] dicts
+		- [x] dicts
 		- [x] sets
-		- [ ] List comprehension
+		- [x] List comprehension
 	- [ ] Imports
-		- [ ] Bibliotecas padrões
-		- [ ] Bibliotecas importantes
+		- [x] Bibliotecas padrões
+		- [x] Bibliotecas importantes
 		- [ ] Imports em diretórios
 - [ ] Intermediário (2 aula)
 	- [x] Decorators
@@ -38,7 +39,6 @@
 		- [x] Discussão
 	- [x] Context Manager
 	- [ ] Classes
-		- [ ] Escopos e namespaces
 		- [ ] Define
 		- [ ] Instância
 		- [ ] Métodos
@@ -50,10 +50,12 @@
 		- [x] Variáveis privadas
 		- [ ] Dunder
 	- [x] Iterators and Generators
-	- [ ] Assync
+	- [x] Assync
 	- [x] Walrus Operator
 	- [x] Ellipsis
 	- [ ] GIL
+	- [x] Unpacking
+	- [ ] Escopos e namespaces
 - [ ] Avançado (1 aulas)
 	- [ ] Design Patterns
 	- [ ] Estruturas de dados avançadas

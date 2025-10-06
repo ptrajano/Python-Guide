@@ -21,7 +21,136 @@ print(my_list[-1])
 
 Por último é legal ressaltar que é possível acessar a lista usando números negativos, aonde o $-1$ retorna o último elemento da lista, o $-2$ retorna o penúltimo e assim sucessivamente.
 
-# Operações nativas
+# Operações
+
+## Operadores Aritméticos
+### Soma
+
+É possível somar duas listas, o que esse processo faz é a concatenação, ou seja, semelhante ao [[#`extend`|extend]], porém não funciona com tupla.
+
+```python
+my_list = [1, 2, 3]
+
+print(my_list + [4, 5, 6])
+```
+
+### Multiplicação
+
+O símbolo de multiplicação, equivale a fazer várias [[#Soma|somas]] no mesmo objeto, ou seja ele vai fazer uma concatenação com ele mesmo a quantidade de vezes que se foi multiplicado
+
+```python
+my_list = [1, 2, 3]
+
+print(my_list * 3)
+```
+
+## Operadores de Comparação
+
+### Igualdade
+
+O símbolo de comparação de igualdade `==` compara se listas contém a mesma quantidade de elementos, e se todos seus elementos são iguais. Além disso, para todo objeto nativo do `python`, o retorno da igualdade entre uma lista e esse é objeto será negativo.
+Já o `!=` responde se dois objetos não são iguais.
+
+```python
+print([1, 2, 3] == [1, 2])
+print([1, 2, 3] != [1, 2, 4])
+print([1, 2, 3] == [1, 2, 3])
+```
+
+### Desigualdades
+
+As comparações feitas em listas são confusas, em primeiro lugar elas só funcionam se os dois objetos forem listas, além disso a forma de sua funcionamento é checar elemento em elemento até encontrar algum termo que é diferente para poder fazer a comparação
+
+```python
+print([1, 2, 3] < [1, 2, 4]) # 3 < 4 (TRUE)
+```
+
+Esse comportamento ocorre se as duas listas tiverem o mesmo tamanho, se elas não tiverem, então irá comparar o tamanho delas
+
+```python
+print([1, 2, 3] < [1, 2, 3, 4]) # len([1, 2, 3]) < len([1, 2, 3, 4])
+```
+
+Além disso é importante ressaltar que, se uma lista ou [[Tupla|tupla]], ou um [[Set|set]], ou qualquer outro objeto que consiga trabalhar com operadores de desigualdade forem elementos de uma lista, então irá encadear para os elementos o comportamento de comparação
+
+```python
+print([1, 2, [1, 2, 3]] < [1, 2, [1, 2, 4]]) # [1, 2, 3] < [1, 2, 4] (3 < 4) (TRUE)
+```
+
+E por último é importante ressaltar que se algum elemento da lista for fazer comparação com outro elemento da lista, e esse outro elemento da lista não puder fazer a comparação então, dará [[Lista de Exceptions#`TypeError`|TypeError]].
+
+
+```python
+print([1, 2, 'a'] < [1, 2, 3])
+```
+
+## Slicing
+
+Slicing (Fatiamento) é uma forma de trabalhar com lista e [[Tupla|tupla]] para obter uma sublista que está dentro da lista original. Se por exemplo, quisermos pegar o quarto termo para frente
+
+```python
+my_list = list(range(10))
+
+print(my_list[3:])
+```
+
+O `[3:]` simboliza que a partir do terceiro termo eu vou pegar todos os termos, mas já
+
+```python
+my_list = list(range(10))
+
+print(my_list[:3])
+```
+
+Pega os 3 primeiros termos, além disso é possível pegar intervalos específicos
+
+```python
+my_list = list(range(10))
+
+print(my_list[3: 6])
+```
+
+Aqui ele pegou uma lista entre o quarto e o sexto elemento. E por último é possível indicar o passo que será feito, ou seja, é possível pegar só os termos que tem índices pares, da seguinte forma
+
+```python
+my_list = list(range(10))
+
+print(my_list[::2])
+```
+
+Ou os ímpares
+
+```python
+my_list = list(range(10))
+
+print(my_list[1::2])
+```
+
+E é possível também inverter uma lista usando isso
+
+```python
+my_list = list(range(10))
+
+print(my_list[::-1])
+```
+
+Dessa forma percebemos que a primeira posição indcopy. ica aonde que vai começar o fatiamento, se estiver vazio começa no 0, a segunda posição indica aonde que para, se estiver vazio para no final da lista, e o último termo indica qual será o passo feito. É possível também fazer uma [[#`copy`|cópia]] da lista com o slicing, da seguinte forma
+
+```python
+my_list = list(range(10))
+
+print(my_list[:])
+```
+
+Esse slicing irá pegar a lista inteira, porém essa cópia não compartilha o endereço de memória da original. Por último é possível usar a classe (LINK LINK LINK) `slice` para gerar um objeto slicer
+
+```python
+slicer = slice(start = 5, stop = 1, step = -1)
+
+my_list = list(range(10))
+
+print(my_list[slicer])
+```
 
 # Métodos Nativos
 
@@ -149,5 +278,34 @@ print(my_list)
 
 ## `sort`
 
+Esse método ordena uma lista, e modifica ela. 
 
-# Slicing
+```python
+my_list = [6, 5, 4, 3, 2, 1, 0]
+
+my_list.sort()
+
+print(my_list)
+```
+
+Além disso ela pode receber dois parâmetros, que são `reverse`, que indica se ordena na ordem contrária
+```python
+my_list = [0, 1, 2, 3, 4, 5, 6]
+
+my_list.sort(reverse=True)
+
+print(my_list)
+```
+
+E `key` que recebe uma função (LINK LINK LINK) que será a forma que o `sort` vai trabalhar, indica como comparar os objetos, então por exemplo
+
+```python
+my_list = ["Python", "Swift","Java", "C++", "Go", "Rust"]
+
+programming_languages.sort(key=len, reverse=True)
+
+print(programming_languages)
+```
+[exemplo](https://www.freecodecamp.org/news/python-sort-how-to-sort-a-list-in-python/)
+
+É possível criar sua própria função que será parâmetro de `key`, neste [site](https://www.freecodecamp.org/news/python-sort-how-to-sort-a-list-in-python/) tem uma explicação mais a fundo.
