@@ -33,7 +33,7 @@
 		- [x] Bibliotecas padrões
 		- [x] Bibliotecas importantes
 		- [x] Imports em diretórios
-- [ ] Intermediário (2 aula)
+- [x] Intermediário (2 aula)
 	- [x] Decorators
 	- [x] Error and exceptions
 		- [x] Try/Except/Finally
@@ -56,16 +56,16 @@
 	- [x] Unpacking
 	- [x] Escopos e namespaces
 - [ ] Avançado (1 aulas)
-	- [ ] Design Patterns
-	- [ ] Estruturas de dados avançadas
-		- [ ] Pilha
-		- [ ] Fila
-		- [ ] Árvore
-		- [ ] Grafo
-		- [ ] Octa-Tree
-	- [ ] Boas práticas
-		- [ ] SOLID
-		- [ ] typing
+	- [x] Design Patterns
+	- [x] Estruturas de dados avançadas
+		- [x] Pilha
+		- [x] Fila
+		- [x] Árvore
+		- [x] Grafo
+		- [x] Octa-Tree
+	- [x] Boas práticas
+		- [x] SOLID
+		- [x] typing
 	- [ ] Desenvolvimento de projeto
 
 
