@@ -4,7 +4,7 @@ Acessando elemento vem de [Understanding the Ellipsis in Python](https://gist.gi
 ## Entendendo a Ellipsis (`...`) em Python
 
 ###  Visão Geral
-O objeto Ellipsis, representado por `...`, é um recurso único e [[Singleton | singleton]] na sintaxe do Python, semelhante ao [[Palavras Restritas#None | None]]. Ele serve a uma variedade de propósitos em diferentes contextos, desde um placeholder em código até uma ferramenta em cenários de programação avançada.
+O objeto Ellipsis, representado por `...`, é um recurso único e [[Design Patterns#Singleton|singleton]] na sintaxe do Python, semelhante ao [[Palavras Restritas#None | None]]. Ele serve a uma variedade de propósitos em diferentes contextos, desde um placeholder em código até uma ferramenta em cenários de programação avançada.
 
 ### Índice
 1. Placeholder para Código Incompleto

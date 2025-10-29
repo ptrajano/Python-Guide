@@ -1,6 +1,7 @@
 
-- [ ] Básico (2 aulas)
-	- [ ] Baixar e Rodar scripts
+- [x] Básico (2 aulas)
+	- [x] Introdução
+	- [x] Baixar e Rodar scripts
 	- [x] Palavras reservadas
 	- [x] Inputs e outputs
 	- [x] Tipos de dados
@@ -55,7 +56,7 @@
 	- [x] GIL
 	- [x] Unpacking
 	- [x] Escopos e namespaces
-- [ ] Avançado (1 aulas)
+- [x] Avançado (1 aulas)
 	- [x] Design Patterns
 	- [x] Estruturas de dados avançadas
 		- [x] Pilha
@@ -66,62 +67,6 @@
 	- [x] Boas práticas
 		- [x] SOLID
 		- [x] typing
-	- [ ] Desenvolvimento de projeto
+	- [x] Desenvolvimento de projeto
 
 
-
-
-
-Estrutura de dados
-Imports
-Error and Exceptions
-Classes
-
-```
-__build_class__ #
-__import__ #
-__loader__ #
-__bases__ #
-__debug__ #
-__doc__ #
-__name__ #
-__package__ #
-__spec__ #
-__slots__ #
-
-# CLASS DIR
-__class__ ## check
-__dict__ ## check
-__dir__ ## check
-__doc__ ##check
-__module__ ## is a string 
-__weakref__ ## type getset_descriptor
-
-# CLASS __class__ type type
-__abstractmethods__ 
-__annotations__ #
-__base__ #
-__bases__ #
-__basicsize__ #
-__dictoffset__ #
-__flags__
-__itemsize__
-__mro__
-__name__ #
-__qualname__ #
-__text_signature__ #
-__type_params__ #
-__weakrefoffset__ #
-mro
-
-# CLASS __dict__ type mappingproxy
-__class_getitem__
-
-# CLASS __dir__ type method_descriptor
-__objclass__
-
-# CLASS __doc__ type NoneType
-__kwdefaults__
-```
-
-[__abstractmethods__](https://stackoverflow.com/questions/24914584/abstractmethods-and-attributeerror) 
