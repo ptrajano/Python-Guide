@@ -38,7 +38,7 @@ print(bool(not None))
 print(bool(...))
 ```
 
-Perceba que, isso acontece pois é necessário que o comportamento funcione de forma análoga ao if e else (LINK LINK LINK)
+Perceba que, isso acontece pois é necessário que o comportamento funcione de forma análoga ao [[If, Elif e Else|if e else]]
 ```python
 vect = [1, 2, 3]
 

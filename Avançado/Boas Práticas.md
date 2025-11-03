@@ -205,7 +205,7 @@ def last_item(my_list: list) -> int:
 	return my_list[-1]
 ```
 
-Não faz sentido trabalhar em uma função de lista, se a lista estiver vazia, ou seja, fazer uma checagem no começo, para não ter que fazer a função inteira com uma lista vazia, faz sentido, isso é comum em estruturas de dados como Pilha, Filha, etc... (LINK LINK LINK).
+Não faz sentido trabalhar em uma função de lista, se a lista estiver vazia, ou seja, fazer uma checagem no começo, para não ter que fazer a função inteira com uma lista vazia, faz sentido, isso é comum em [[Estrutura de Dados Avançadas|estruturas de dados]] como Pilha, Filha, etc...
 Os casos que são bons de ter um `return` antes são os casos que as operações que serão feitas na função não podem ser feitas se uma condição não acontecer.
 
 # Tipos de Dados no Retorno

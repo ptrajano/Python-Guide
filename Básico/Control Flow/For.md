@@ -95,7 +95,7 @@ for num in range(10):
 
 ## `else`
 
-O `else` no `for` e no [[While|while]] e no [[Try and Except|try and except]] são implementadas, mas devem ser evitadas, pois o seu comportamento não é claro, ou seja, se alguém que não conhece muito de `python` ver um laço com um `else` em seguida a pessoa não vai conseguir entender de forma direta o que está acontecendo, e isso é contra o próprio ZEN do `python` (LINK LINK LINK).
+O `else` no `for` e no [[While|while]] e no [[Try and Except|try and except]] são implementadas, mas devem ser evitadas, pois o seu comportamento não é claro, ou seja, se alguém que não conhece muito de `python` ver um laço com um `else` em seguida a pessoa não vai conseguir entender de forma direta o que está acontecendo, e isso é contra o próprio [ZEN do python](https://peps.python.org/pep-0020/) .
 Mas o seu funcionamento é fácil de entender e existem soluções melhores para se usar.
 O `else` será executado quando um `break` não for acionado dentro do laço, ou seja, todas as repetições que precisavam ser feitas foram feitas até o final.
 

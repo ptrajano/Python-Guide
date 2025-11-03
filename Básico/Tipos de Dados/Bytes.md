@@ -7,7 +7,7 @@ print(b'test')
 
 Ao tentar adicionar um carácter não ASCII, será chamado um [[Lista de Exceptions#`SyntaxError`|SyntaxError]]. O intuito principal dessa `byte-string` é para que elas estejam prontas para serem salvas na memória e no disco, normalmente utiliza-se desse objeto ao encontrar uma [[String|string]] que não se tem informação sobre, e não se sabe sua codificação, como por exemplo ao tentar ler um documento de imagem, áudio, vídeo, etc.
 
-O motivo deles serem falados separadamente é por quê eles não herdam do objeto [[String|str]], ele não é uma subclasse (LINK LINK LINK)
+O motivo deles serem falados separadamente é por quê eles não herdam do objeto [[String|str]], ele não é uma [[Herança e Composição#Herança|subclasse]]
 
 ```python
 print(issubclass(bytes, str))

@@ -23,7 +23,7 @@ b = Singleton()
 print(a is b)
 ```
 
-Neste caso existe duas instâncias da mesma classe, dessa forma o que for modificado em `a` não acontecerá em `b`, para definir o Singleton, existe duas formas principais em `python` a primeira é a mais simples, que implementa diretamente em cada classe (LINK LINK LINK) usando o  dunder [[Dunder#`__new__` | __new__]], essa implementação é a mais simples mas ao mesmo tempo é bastante complexa.
+Neste caso existe duas instâncias da mesma classe, dessa forma o que for modificado em `a` não acontecerá em `b`, para definir o Singleton, existe duas formas principais em `python` a primeira é a mais simples, que implementa diretamente em cada [[Classes|classe]] usando o  dunder [[Dunder#`__new__` | __new__]], essa implementação é a mais simples mas ao mesmo tempo é bastante complexa.
 
 ```python
 class Singleton:
@@ -36,7 +36,7 @@ class Singleton:
 
 O `__new__`, trata da construção da classe (antes da inicialização `__init__`), o que ela faz é que ao tentar construir a classe ela checa se uma instância da classe já foi criada, dessa forma se caso já tiver sido criada alguma instância, ela irá apontar para a criada, ao invés de criar uma nova.
 
-E a segunda forma é utilizando metaclass (LINK LINK LINK), essa é a forma mais "correta", pois é um método estático e todo o processo Singleton está escondido
+E a segunda forma é utilizando [[MetaClasse|metaclass]], essa é a forma mais "correta", pois é um método estático e todo o processo Singleton está escondido
 
 ```python
 class Singletonmeta(type):
@@ -68,7 +68,7 @@ Além disso se o código estiver rodando em multi-thread a solução não será 
 
 ## Decorator
 
-Esse padrão de design já é implementado diretamente no `python` através dos [[Decorators]], mas os decorators são feitos para funcionar melhor em funções (LINK LINK LINK). Os decorators servem para adicionar funcionalidade adicional para um outro objeto.
+Esse padrão de design já é implementado diretamente no `python` através dos [[Decorators]], mas os decorators são feitos para funcionar melhor em [[Funções|funções]]. Os decorators servem para adicionar funcionalidade adicional para um outro objeto.
 
 ```python
 def fib_cache(foo):

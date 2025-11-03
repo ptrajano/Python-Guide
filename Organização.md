@@ -70,3 +70,16 @@
 	- [x] Desenvolvimento de projeto
 
 
+Primeira Aula
+	Introdução
+	Como baixar (?)
+	Escrever Variável
+	print input
+	Tipos de Dados
+		Int
+		float
+		str
+	Controle de Fluxo
+		if/elif/else
+		for
+		while

@@ -63,7 +63,7 @@ Essa palavra e  [[#await]] são palavras relacionadas a execuções concorrentes
 
 ## break
 
-Usada para sair de um laço de repetição (LINK LINK LINK), como [[#for]] e o [[#while]]
+Usada para sair de um laço de repetição, como [[#for]] e o [[#while]]
 
 ```python
 for i in range(5):
@@ -75,11 +75,16 @@ for i in range(5):
 
 ## class
 
-Usado na criação de uma classe (LINK LINK LINK)
+Usado na criação de uma [[Classes|classe]]
+
+```python
+class MyClass:
+	pass
+```
 
 ## continue
 
-Usada para ir direto para a próxima iteração de um laço de repetição (LINK LINK LINK)
+Usada para ir direto para a próxima iteração de um laço de repetição ([[For|for]] e [[While|while]])
 
 ```python
 for i in range(5):
@@ -92,7 +97,7 @@ for i in range(5):
 
 ## def
 
-Usado na criação de uma função (LINK LINK LINK)
+Usado na criação de uma [[Funções|função]]
 
 ```python
 def hello_world():
@@ -103,7 +108,7 @@ hello_world()
 
 ## del
 
-Palavra associada a liberação do espaço de memória de alguma variável, ou instância (LINK LINK LINK)
+Palavra associada a liberação do espaço de memória de alguma variável, ou [[Classes|instância]]
 
 ```python
 x = 1
@@ -113,7 +118,7 @@ print(x)
 
 ## elif
 
-Palavra associada a uma outra condicional em um bloco de `if` (LINK LINK LINK)
+Palavra associada a uma outra condicional em um bloco de [[If, Elif e Else|if]]
 
 ```python
 x = "Night"
@@ -127,7 +132,7 @@ elif x == "Night":
 
 ## else
 
-O `else` é associado a uma condição de fluxo (LINK LINK LINK)
+O `else` é associado a uma [[If, Elif e Else|condição de fluxo]]
 
 ```python
 x = -1
@@ -149,22 +154,22 @@ except:
 
 ## finally
 
-A palavra têm utilidades diferentes dependendo de onde é chamada [[Try and Except]],  for (LINK LINK LINK) e while (LINK LINK LINK)
+A palavra têm utilidades diferentes dependendo de onde é chamada [[Try and Except]],  [[For|for]]  e [[While|while]] 
 
 ## for
 
-Forma padrão de um laço de repetição (LINK LINK LINK)
+Forma padrão de um [[For|laço de repetição]]
 
 ## from
 
-Relacionado ao importar componentes específicos de uma biblioteca (LINK LINK LINK)
+Relacionado ao importar componentes específicos de uma [[Criar sua própria "Biblioteca"|biblioteca]]
 ```python
 from math import sen, cos
 ```
 
 ## global
 
-Usada dentro de escopos (LINK LINK LINK), como funções (LINK LINK LINK) para indicar que a variável que será acessada e modificada está no escopo global
+Usada dentro de [[Escopos e Namespaces|escopos]], como [[Funções|funções]]  para indicar que a variável que será acessada e modificada está no escopo global
 
 ```python
 global_var = 10
@@ -186,7 +191,7 @@ print(new_var)
 ```
 ## if
 
-Base para condicionais (LINK LINK LINK)
+Base para [[If, Elif e Else|condicionais]]
 
 ```python
 x = 1
@@ -195,7 +200,7 @@ if x == 1:
 ```
 ## import
 
-Relacionado a importação de uma biblioteca (LINK LINK LINK)
+Relacionado a importação de uma [[Criar sua própria "Biblioteca"|biblioteca]]
 ```python
 import math
 from math import cos, sin

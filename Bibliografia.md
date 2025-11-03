@@ -159,7 +159,7 @@ https://en.wikipedia.org/wiki/No_Silver_Bullet
 [linguagem de máquina](https://www.lenovo.com/br/pt/glossary/machine-language/)
 [números binários](https://www.google.com/search?q=numeros+binarios&ie=UTF-8)
 [Python](https://www.python.org/)
-[programação interpretada](google.com/search?q=interpreter+vs+compiled&oq=interpreter+vs+compiled&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIGCAEQLhhA0gEINjczNGowajGoAgCwAgA&sourceid=chrome&ie=UTF-8)
+[programação interpretada](https://www.freecodecamp.org/news/compiled-versus-interpreted-languages/)
 [alto nível](https://en.wikipedia.org/wiki/High-level_programming_language)
 [Guido Von Rossum](https://pt.wikipedia.org/wiki/Guido_van_Rossum)
 [dados da jetbrains](https://lp.jetbrains.com/python-developers-survey-2022/)

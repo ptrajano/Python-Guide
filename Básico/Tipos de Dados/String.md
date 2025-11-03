@@ -122,7 +122,7 @@ obj = 10
 print(f"Repr: {obj!r}, Str: {obj!s}")
 ```
 
-o `!r` indica que se quer pegar o [[Funções Nativas#repr|repr]] do objeto, e o `!s` indica que irá pegar a `string` direta, muito útil para classes (LINK LINK LINK) que usam os [[Dunder|dunders]] [[Dunder#`__str__`|__str__]] e [[Dunder#`__repr__`|__repr__]]. 
+o `!r` indica que se quer pegar o [[Funções Nativas#repr|repr]] do objeto, e o `!s` indica que irá pegar a `string` direta, muito útil para [[Classes|classes]] que usam os [[Dunder|dunders]] [[Dunder#`__str__`|__str__]] e [[Dunder#`__repr__`|__repr__]]. 
 # Métodos Nativos
 ## `capitalize`
 

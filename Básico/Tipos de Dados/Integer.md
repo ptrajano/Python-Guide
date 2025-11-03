@@ -1,4 +1,4 @@
-Para gerar um número inteiro em `python`, basta escrever o número e não colocar o separador de casas decimais (`.`), que indica um [[Float | float]], além disso para transformar uma [[String | string]] em inteiro, basta usar a função (LINK LINK LINK) `int`.
+Para gerar um número inteiro em `python`, basta escrever o número e não colocar o separador de casas decimais (`.`), que indica um [[Float | float]], além disso para transformar uma [[String | string]] em inteiro, basta usar a [[Funções|função]] `int`.
 
 ```python
 var = '10'
@@ -114,11 +114,11 @@ print(num_01 >> 2) # 0000011 (3)
 print(num_01 << 3) # 1111000 (120)   
 ```
 
-Se estiver sendo feito o shift para  a direita (`>>`) assume que todo bit que não está aparecendo é um zero. É importante comentar que essa operação nos inteiros, funciona como um dividir e multiplicar por $2$, só que a divisão é uma divisão por inteiro (LINK LINK LINK), e como as operações são bitwise elas são mais rápidas, então, se for pensar em tempo de código, é melhor usar operadores bit a bit do que usar a multiplicação e a divisão por inteiro.  
+Se estiver sendo feito o shift para  a direita (`>>`) assume que todo bit que não está aparecendo é um zero. É importante comentar que essa operação nos inteiros, funciona como um dividir e multiplicar por $2$, só que a divisão é uma [[Float#Divisão Inteira|divisão por inteiro]], e como as operações são bitwise elas são mais rápidas, então, se for pensar em tempo de código, é melhor usar operadores bit a bit do que usar a multiplicação e a divisão por inteiro.  
 
 # Métodos Nativos
 
-Os métodos nativos são chamados a partir do próprio objeto a explicação mais a fundo disso é apresentada em classe (LINK LINK LINK), e mais especificamente em objetos (LINK LINK LINK)
+Os métodos nativos são chamados a partir do próprio objeto a explicação mais a fundo disso é apresentada em [[Classes|classes]], e mais especificamente em [[Python e Objetos|objetos]]
 
 ## `as_integer_ratio`
 
@@ -165,7 +165,7 @@ num = 10
 print(num.denominator)
 ```
 
-Além disso, isso não é chamável, ele é como se fosse um atributo (LINK LINK LINK), mas na prática é um [descriptor](https://docs.python.org/3/howto/descriptor.html) . Minha opinião é que ou esse descriptor deveria existir em [[Float|float]] e [[Complex|comples]], ou não deveria existir, pois não faz sentido o jeito que ta implementado.
+Além disso, isso não é chamável, ele é como se fosse um [[Classes|atributo]], mas na prática é um [descriptor](https://docs.python.org/3/howto/descriptor.html) . Minha opinião é que ou esse descriptor deveria existir em [[Float|float]] e [[Complex|comples]], ou não deveria existir, pois não faz sentido o jeito que ta implementado.
 ## `from_bytes`
 
 Transforma objetos de [[Bytes]] para inteiros, é importante ressaltar que muito provavelmente isso daqui deveria ser uma função ao invés de um método, pois o método retorna o valor, portanto conseguimos usar de duas formas

@@ -8,7 +8,7 @@ Todo dado que é pego no `python` é uma [[String]], portanto é necessário mod
 name = input("Digite seu nome: ")
 ```
 
-A função(LINK LINK LINK) `input` recebe apenas um parâmetro que é o texto que irá aparecer no terminal pedindo dado, se não for informado nenhum texto, não aparecerá nada
+A [[Funções|função]] `input` recebe apenas um parâmetro que é o texto que irá aparecer no terminal pedindo dado, se não for informado nenhum texto, não aparecerá nada
 
 ```python
 name = input()
@@ -16,21 +16,21 @@ name = input()
 
 ## Print
 
-O `print` é a função (LINK LINK LINK) de colocar na tela, ela irá colocar na tela algum conteúdo
+O `print` é a [[Funções|função]] de colocar na tela, ela irá colocar na tela algum conteúdo
 
 ```python
 name = input("Digite seu nome: ")
 print(f"Olá {name}, seja bem vindo!")
 ```
 
-Neste caso utilizou-se de uma f-string (LINK LINK LINK), mas além de aceitar strings como argumento, o `print` aceita todas as estruturas de dados
+Neste caso utilizou-se de uma [[String#`f-string`|f-string]], mas além de aceitar strings como argumento, o `print` aceita todas as estruturas de dados
 
 ```python
 number = 10
 print(number)
 ```
 
-Ou por exemplo, uma função (LINK LINK LINK)
+Ou por exemplo, uma [[Funções|função]]
 
 ```python
 def function():
