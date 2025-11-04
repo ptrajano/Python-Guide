@@ -1,4 +1,4 @@
-Um dicionário é uma estrutura de dados mutável, não é ordenada da forma habitual, pois não existe uma ordenação numérica igual uma [[Lista]], mas a partir do [Python3.7](https://mail.python.org/pipermail/python-dev/2017-December/151283.html) os dicionários mantem a ordem de inserção. O dicionário é um conjunto de chaves e valores, aonde os valores são únicas e imutáveis, como por exemplo uma [[Tupla]], e além disso apresenta o mesmo comportamento de um [[Set]] em que é impossível adicionar mais de uma chave iguais. Já os valores podem ser qualquer objeto (LINK LINK LINK).
+Um dicionário é uma estrutura de dados mutável, não é ordenada da forma habitual, pois não existe uma ordenação numérica igual uma [[Lista]], mas a partir do [Python3.7](https://mail.python.org/pipermail/python-dev/2017-December/151283.html) os dicionários mantem a ordem de inserção. O dicionário é um conjunto de chaves e valores, aonde os valores são únicas e imutáveis, como por exemplo uma [[Tupla]], e além disso apresenta o mesmo comportamento de um [[Set]] em que é impossível adicionar mais de uma chave iguais. Já os valores podem ser qualquer [[Classes|objeto]].
 
 ```python
 my_dict = {
@@ -123,7 +123,7 @@ print(my_dict.get(2, default = 'NoKeyFound'))
 
 ## `items`
 
-Este método retorna o par de chave e valor que estão no dicionário, seu retorno é um objeto parecido com uma [[Tupla]], mas não é, ele é da classe (LINK LINK LINK) `dict_items`, porém cada par está dentro do `dict_items` como uma tupla.
+Este método retorna o par de chave e valor que estão no dicionário, seu retorno é um objeto parecido com uma [[Tupla]], mas não é, ele é da [[Classes|classe]] `dict_items`, porém cada par está dentro do `dict_items` como uma tupla.
 
 ```python
 my_dict = {1: 2, 3: 4}
@@ -132,7 +132,7 @@ print(my_dict.items())
 ```
 ## `keys`
 
-Este método retorna as chaves que estão no dicionário, seu retorno é um objeto parecido com uma [[Tupla]], mas não é, ele é da classe (LINK LINK LINK) `dict_keys`.
+Este método retorna as chaves que estão no dicionário, seu retorno é um objeto parecido com uma [[Tupla]], mas não é, ele é da [[Classes|classe]] `dict_keys`.
 
 ```python
 my_dict = {1: 2, 3: 4}
@@ -198,7 +198,7 @@ print(my_dict)
 
 ## `values`
 
-Este método retorna os valores que estão no dicionário, seu retorno é um objeto parecido com uma [[Tupla]], mas não é, ele é da classe (LINK LINK LINK) `dict_values`.
+Este método retorna os valores que estão no dicionário, seu retorno é um objeto parecido com uma [[Tupla]], mas não é, ele é da [[Classes|classe]] `dict_values`.
 
 ```python
 my_dict = {1: 2, 3: 4}

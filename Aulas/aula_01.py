@@ -1,0 +1,5 @@
+name = input('Digite seu nome: ')
+print(f'name: {name}')
+age = input('Digite sua idade: ')
+print(f'age {age}')
+print('oii tudo bem ', name, 'de', age, 'anos')

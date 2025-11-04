@@ -69,7 +69,7 @@ for num in my_list:
 
 Perceba que dessa forma é possível ler o laço de repetição sem se importar com a implementação da função `is_even`, pois é possível entender que ela checa se um número é par ou ímpar de uma forma mais alto nível. Além disso é possível perceber que modulariza o código.
 
-Para fazer uma função utiliza-se a palavra [[Palavras Restritas#def|def]], para definir uma função, seguida pelo nome da função, e entre os parâmetros (LINK LINK LINK) será os parâmetros que serão recebidos e nas linhas identadas seguintes estará o comportamento da função, que utilizará os parâmetros.
+Para fazer uma função utiliza-se a palavra [[Palavras Restritas#def|def]], para definir uma função, seguida pelo nome da função, e entre os [[Argumentos de uma Função|parâmetros]] será os parâmetros que serão recebidos e nas linhas identadas seguintes estará o comportamento da função, que utilizará os parâmetros.
 
 ## Funções Internas
 

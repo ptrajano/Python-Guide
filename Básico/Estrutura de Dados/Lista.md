@@ -1,5 +1,5 @@
 
-Uma lista é uma estrutura de dados, que representa algo parecido com um [vetor](https://pt.wikipedia.org/wiki/Vetor_(matem%C3%A1tica)), ela é uma estrutura de dados que recebe qualquer objeto (LINK LINK LINK) do `python` e o salva em uma lista, conseguindo colocar vários items em uma mesma variável. Além disso uma lista é um objeto que é mutável, ou seja, o objeto pode variar ao passar do tempo. Isso é importante para objetos como o [[Dicionário|dict]], que sua chave precisa ser um objeto imutável. 
+Uma lista é uma estrutura de dados, que representa algo parecido com um [vetor](https://pt.wikipedia.org/wiki/Vetor_(matem%C3%A1tica)), ela é uma estrutura de dados que recebe qualquer [[Classes|objeto]] do `python` e o salva em uma lista, conseguindo colocar vários items em uma mesma variável. Além disso uma lista é um objeto que é mutável, ou seja, o objeto pode variar ao passar do tempo. Isso é importante para objetos como o [[Dicionário|dict]], que sua chave precisa ser um objeto imutável. 
 Para criar uma lista, existe três formas, a primeira é a padrão que é usada normalmente
 
 ```python
@@ -142,7 +142,7 @@ my_list = list(range(10))
 print(my_list[:])
 ```
 
-Esse slicing irá pegar a lista inteira, porém essa cópia não compartilha o endereço de memória da original. Por último é possível usar a classe (LINK LINK LINK) `slice` para gerar um objeto slicer
+Esse slicing irá pegar a lista inteira, porém essa cópia não compartilha o endereço de memória da original. Por último é possível usar a [[Classes|classe]] `slice` para gerar um objeto slicer
 
 ```python
 slicer = slice(start = 5, stop = 1, step = -1)
@@ -297,7 +297,7 @@ my_list.sort(reverse=True)
 print(my_list)
 ```
 
-E `key` que recebe uma função (LINK LINK LINK) que será a forma que o `sort` vai trabalhar, indica como comparar os objetos, então por exemplo
+E `key` que recebe uma [[Funções|função]] que será a forma que o `sort` vai trabalhar, indica como comparar os objetos, então por exemplo
 
 ```python
 my_list = ["Python", "Swift","Java", "C++", "Go", "Rust"]
