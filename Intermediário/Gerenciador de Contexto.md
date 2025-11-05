@@ -1,5 +1,5 @@
 
-Um [Gerenciador de Contexto](https://book.pythontips.com/en/latest/context_managers.html) permite a alocação e a liberação de recursos de forma simples, e diminuindo a chance de houver um [vazamento de memória](https://en.wikipedia.org/wiki/Memory_leak). Pode ser entendi isso através do seguinte exemplo
+Um [Gerenciador de Contexto](https://book.pythontips.com/en/latest/context_managers.html) permite a alocação e a liberação de recursos de forma simples, e diminuindo a chance de haver [vazamento de memória](https://en.wikipedia.org/wiki/Memory_leak). Pode entender isso através do seguinte exemplo
 
 ```python
 f = open('file.txt', 'w')

@@ -9,7 +9,7 @@ except:
 	x = y
 ```
 
-Mas essa não é a forma mais correta de se trabalhar com isso, pois nesse caso todo e qualquer erro que possa acontecer ele irá para o `except`, então por exemplo apertar o `ctrl + c` para finalizar o programa não irá finalizar pois o isso é uma exceção, então a forma mais correta de se trabalhar é 
+Mas essa não é a forma mais correta de se trabalhar com isso, pois nesse caso todo e qualquer erro que possa acontecer irá para o `except`, então por exemplo apertar o `ctrl + c` para finalizar o programa não irá finalizar pois o isso é uma exceção, então a forma mais correta de se trabalhar é 
 
 ```python
 y = 0
@@ -54,7 +54,7 @@ except Exception as e:
 Dessa forma se acontecer um erro numérico ele irá indicar de uma forma, se só fechar o sistema ele indica de outra e se acontecer um erro inesperado o erro ainda acontece.
 
 ## Finally
-O `finally` é uma outra keyword (LINK LINK LINK) importante para entender o funcionamento do try e o except, o finally é um bloco de código que roda sempre independente de exceções ou não após o try e o except, uma das suas principais finalidades é no uso de context manager [o que é um context manager?](https://pt.stackoverflow.com/questions/535114/o-que-%C3%A9-um-context-manager-em-python). Ou seja, ao abrir um arquivo, se acontecer algum erro ou não enquanto o arquivo estiver aberto o arquivo tem que ser fechado para não deixar na memória
+O `finally` é uma outra [[Palavras Restritas|keyword]] importante para entender o funcionamento do try e o except, o finally é um bloco de código que roda sempre independente de exceções ou não após o try e o except, uma das suas principais finalidades é no uso de context manager [o que é um context manager?](https://pt.stackoverflow.com/questions/535114/o-que-%C3%A9-um-context-manager-em-python). Ou seja, ao abrir um arquivo, se acontecer algum erro ou não enquanto o arquivo estiver aberto o arquivo tem que ser fechado para não deixar na memória
 
 ```python
 try:

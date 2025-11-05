@@ -95,7 +95,7 @@ new_function = decorator(func = check_internet)
 new_function(site)
 ```
 
-Um último ponto que é importante falar é saber fazer um decorator dentro de uma classe (LINK LINK LINK), isso trará mais um nível de função, mas é útil quando está trabalhando com uma classe e o decorator só é útil dentro da classe 
+Um último ponto que é importante falar é saber fazer um decorator dentro de uma [[Classes|classe]], isso trará mais um nível de função, mas é útil quando está trabalhando com uma classe e o decorator só é útil dentro da classe 
 
 ```python
 class A:
@@ -209,7 +209,7 @@ new_function(*args, **kwargs)
 
 ### Decorators em lambda
 
-É possível usar um decorator em um lambda (LINK LINK LINK)
+É possível usar um decorator em um [[Funções Lambda|lambda]]
 
 ```python
 @decorator

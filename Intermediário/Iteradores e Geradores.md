@@ -1,4 +1,4 @@
-Um [iterador](https://www.geeksforgeeks.org/python/difference-between-iterator-vs-generator/) é um objeto que contêm um número contável de valores e é usado para iterar sobre valores como [[Lista]], [[Dicionário]], [[Set]], [[String]], [[Tupla]], entre outros. Iteradores são implementados usando classes (LINK LINK LINK).  Iteradores usam de [avaliações preguiçosas](https://realpython.com/python-lazy-evaluation/),  que basicamente checam se a expressão é valida até precisar dela, isso ajuda na alocação da memória, e diminui o desperdício de memória.
+Um [iterador](https://www.geeksforgeeks.org/python/difference-between-iterator-vs-generator/) é um objeto que contêm um número contável de valores e é usado para iterar sobre valores como [[Lista]], [[Dicionário]], [[Set]], [[String]], [[Tupla]], entre outros. Iteradores são implementados usando [[Classes|classes]].  Iteradores usam de [avaliações preguiçosas](https://realpython.com/python-lazy-evaluation/),  que basicamente checam se a expressão é valida até precisar dela, isso ajuda na alocação da memória, e diminui o desperdício de memória.
 
 ```python
 iter_list = iter([1, 2, 3, 4, 5])
@@ -9,7 +9,7 @@ print(next(iter_list))
 
 Se tentar chamar uma quantidade maior de valores que o que têm na lista será chamada uma exception [[Lista de Exceptions#`StopIteration`|StopIteration]], que indica a finalização do iterador, perceba que é possível criar um iterador infinito contável.
 
-Já geradores são um jeito de criar um iterador aonde usa-se a palavra [[Palavras Restritas#yield|yield]], são criados usando funções ou métodos de uma classe 
+Já geradores são um jeito de criar um iterador aonde usa-se a palavra [[Palavras Restritas#yield|yield]], eles são criados usando funções ou métodos de uma classe 
 
 ```python
 def square_nums(n: int):
