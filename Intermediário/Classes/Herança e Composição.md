@@ -58,6 +58,10 @@ class Intern(Worker, Student):
     
     def report(self):
         return f"Intern: {self.title}, Course: {self.course}"
+        
+class Intern(Student, Worker):
+	def __init__(self, institution, course, title, salary):
+		pass
 ```
 
 Neste caso estamos herdando de duas classes. Heranças múltiplas são algo que não é recomendado, pois pode gerar comportamentos inesperados, como por exemplo
@@ -135,9 +139,8 @@ flowchart TD
     D --> E
 ```
 
-Todos a árvore de herança da primeira classe, e em seguida toda a árvore de herança do seguinte termo. Acredito que tá obvio que é confuso isso, e é por causa disso existem soluções melhores ao invés de herança, múltiplas heranças deve ser evitada com todas as forças.
+Todos a árvore de herança da primeira classe, e em seguida toda a árvore de herança do seguinte termo. Acredito que tá obvio que é confuso isso, e é por causa disso existem soluções melhores ao invés de múltiplas heranças, elas devem ser evitadas com todas as forças.
 
-Mas existem casos que é extremamente útil usar de herança, como por exemplo (LINK LINK LINK)
 ## Composição
 
 Composição é fazer uma classe ser um atributo de outra classe

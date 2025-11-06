@@ -130,12 +130,6 @@ Foi usado o seguinte site para pegar todos os dunders ([Lista de dunders](https:
 | ABCs                                                                               | `issubclass(U, T)`                                                    | `T.__subclasshook__(U)`    | `bool`                | [[#`__subclasshook__`]]                   |             |
 
 
-`__init__`
-Comparação
-Coleção
-Aritmético
-Funções matemáticas
-
 # Criação de Objetos
 ## `__init__`
 

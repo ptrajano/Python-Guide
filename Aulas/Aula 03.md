@@ -61,3 +61,11 @@ Erro: Por favor, digite apenas números!
 Digite um número (ou 'exit' para sair): 30
 Digite um número (ou 'exit' para sair): exit
 ```
+
+$$
+F_n = F_{n- 1} + F_{n- 2}
+$$
+$$
+F_{n+1} = F_{n} + F_{n- 1}
+$$
+	

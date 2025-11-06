@@ -4,7 +4,7 @@ Uma função lambda é uma [[Funções|função]] que é feita em uma linha, ela
 ```python
 spam = ['a1', 'a2', 'a3']
 
-sorted(spam, lambda x: int(x[1]))
+sorted(spam, key = lambda x: int(x[1]))
 ```
 [Exemplo de lambda](https://discuss.python.org/t/what-is-the-purpose-of-lambda-expressions/12415/2)
 

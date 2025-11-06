@@ -48,7 +48,7 @@ class MetaRegister(type):
 	def __init__(cls, name, bases, namespace):
         super().__init__(name, bases, namespace)
         
-        if not ma,e.startswith('_'):
+        if not name.startswith('_'):
             MetaRegister._registered_classes[name] = cls
             print(f"Registered Class: {name}")
     

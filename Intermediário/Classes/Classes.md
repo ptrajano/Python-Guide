@@ -1,6 +1,6 @@
-Trabalhar com [classes](https://docs.python.org/3/tutorial/classes.html) é uma forma diferente de se programar se comparado com programação usando funções, como por ser visto nesta discussão [Functional Programming vs Object Oriented Programming ](https://www.reddit.com/r/ProgrammingLanguages/?f=flair_name%3A%22Discussion%22),pois o paradigma é diferente.
+Trabalhar com [classes](https://docs.python.org/3/tutorial/classes.html) é uma forma diferente de se programar se comparar com programação usando funções, como por ser visto nesta discussão [Functional Programming vs Object Oriented Programming ](https://www.reddit.com/r/ProgrammingLanguages/?f=flair_name%3A%22Discussion%22),pois o paradigma é diferente.
 
- [Programa orientada a objetos](https://pt.wikipedia.org/wiki/Programa%C3%A7%C3%A3o_orientada_a_objetos) (OOP) é uma forma de se programar que visa estruturar o programa, suas propriedades e o seu comportamento estão relacionados a apenas um objeto (LINK LINK LINK). ([OOP](https://realpython.com/python3-object-oriented-programming/))
+ [Programa orientada a objetos](https://pt.wikipedia.org/wiki/Programa%C3%A7%C3%A3o_orientada_a_objetos) (OOP) é uma forma de se programar que visa estruturar o programa, suas propriedades e o seu comportamento estão relacionados a apenas um objeto. ([OOP](https://realpython.com/python3-object-oriented-programming/))
 
 A programação orientada a objetos visa construir objetos que contenham ao mesmo tempo  atributos (variáveis) e métodos ([[Funções|funções]]), pois todas essas coisas estão relacionadas, por exemplo neste caso. Vamos tentar construir o equivalente a dois animais, sendo um cachorro e um gato sem usar classe.
 
@@ -62,7 +62,7 @@ print(dog.speak())
 print(cat.speak())
 ```
 
-Essa é uma solução extremamente completa, aonde usa-se de herança (LINK LINK LINK) de uma classe mais genérica que seria o animal, essa classe representaria um ponto comum em todos os animais, informações e ações que todos os animais tem, independente da espécie, isso da uma liberdade altíssima para criar novas especies e adicionar novas funcionalidades, tanto para os animais como um todo, mas como também para espécies específicas, por exemplo se criarmos pássaros e quisermos saber se ele tá voando ou não, conseguimos só criando um novo método (LINK LINK LINK), dentro de pássaro sem perder todas as outras funcionalidades que os animais tem, além disso a estrutura final
+Essa é uma solução extremamente completa, aonde usa-se de [[Herança e Composição#Herança|herança]] de uma classe mais genérica que seria o animal, essa classe representaria um ponto comum em todos os animais, informações e ações que todos os animais tem, independente da espécie, isso da uma liberdade altíssima para criar novas especies e adicionar novas funcionalidades, tanto para os animais como um todo, mas como também para espécies específicas, por exemplo se criarmos pássaros e quisermos saber se ele tá voando ou não, conseguimos só criando um novo método, dentro de pássaro sem perder todas as outras funcionalidades que os animais tem, além disso a estrutura final
 
 ```python
 print(dog.speak())
@@ -80,14 +80,14 @@ pois, pensando de uma forma mais filosófica, não é como se a fala fosse uma c
 
 ## Criando uma Classe
 
-Para criar uma classe, usa-se da palavra [[Palavras Restritas#class|class]] para definir que irá se escrever uma classe, ela equivale ao [[Palavras Restritas#def|def]] de uma função, em seguida coloca-se o nome da classe, que por convenção (em basicamente todas as linguagens de programação), que toda palavra começa com letra maiúscula e não é separada
+Para criar uma classe, usa-se da palavra [[Palavras Restritas#class|class]] para definir que irá escrever uma classe, ela equivale ao [[Palavras Restritas#def|def]] de uma função, em seguida coloca-se o nome da classe, que por convenção (em basicamente todas as linguagens de programação), cada palavra começa com letra maiúscula e não é separada
 
 ```python
 class FinancialMarket:
 	...
 ```
 
-Em seguida para definir a inicialização, que seria os parâmetros que a classe recebe ao ser criada usa-se o [[Dunder|dunder]] [[Dunder#`__init__`|__init__]], para quem vêm de linguagens de outras linguagens de programação recomendo ler a discussão em [[Dunder#`__new__`|__new__]], pois o `__init__` não é o constructor.
+Em seguida para definir a inicialização, que seria os parâmetros que a classe recebe ao ser criada usa-se o [[Dunder|dunder]] [[Dunder#`__init__`|__init__]], para quem vêm de outras linguagens de programação recomendo ler a discussão em [[Dunder#`__new__`|__new__]], pois o `__init__` não é o constructor.
 
 ```python
 class Animal:
@@ -97,9 +97,9 @@ class Animal:
 		self.age = age
 ```
 
-o `__init__` é tratado como se fosse uma função, mas em todos os métodos é importante colocar um primeiro parâmetro, que por convenção, se chama self (LINK LINK LINK), esse objeto será discutido mais a frente.
+o `__init__` é tratado como se fosse uma função, mas em todos os métodos é importante colocar um primeiro parâmetro que, por convenção, se chama self , esse objeto será discutido mais a frente.
 
-Ao iniciar uma classe com valores, cria-se um objeto (LINK LINK LINK), que seria uma [instância de uma classe](https://www.reddit.com/r/learnprogramming/comments/pp9cx2/an_object_is_an_instance_of_a_class_what_is_it/), de uma forma simples, enquanto que a classe é uma definição abstrata do que seria um animal, um objeto seria um animal em si.
+Ao iniciar uma classe com valores, cria-se um objeto, que seria uma [instância de uma classe](https://www.reddit.com/r/learnprogramming/comments/pp9cx2/an_object_is_an_instance_of_a_class_what_is_it/), de uma forma simples, enquanto que a classe é uma definição abstrata do que seria um animal, um objeto seria um animal em si.
 
 Para criar um método, usa-se da noção de função identada dentro da classe
 
@@ -115,13 +115,13 @@ class Animal:
 		
 ```
 
-Não vamos entrar agora no `self.__class__.__name__`, pois é um conceito mais complexo de [[Dunder|dunder]], mas uma boa forma de se pensar no `self` é que o primeiro parâmetro está passando o objeto em si, então no caso do nosso cachorrinho `Rex`, o `self` passaria todas as informações do cachorro junto com tudo que ele poderia fazer para dentro do método, mas esse parâmetro é implícito, ao se chamar um método não precisa colocar o `self`
+Não vamos entrar agora no `self.__class__.__name__`, pois é um conceito mais complexo de [[Dunder|dunder]], mas uma boa forma de se pensar no `self` é que o primeiro parâmetro está passando o objeto em si, então no caso do nosso cachorrinho `Rex`, o `self` passaria todas as informações do cachorro junto com tudo que ele poderia fazer dentro do método, mas esse parâmetro é implícito, ao se chamar um método não precisa colocar o `self`
 
 ```python
 print(dog.speak()) # dog.speak(dog)
 ```
 
-Além disso é possível adicionar outros parâmetros pós `self`, como foi feito no `__init__`, o seu funcionamento é idêntico ao [[Argumentos de uma Função|argumento de uma função]].
+Além disso é possível adicionar outros parâmetros após o `self`, como foi feito no `__init__`, o seu funcionamento é idêntico ao [[Argumentos de uma Função|argumento de uma função]].
 
 Por último é importante falar sobre a diferença entre um atributo de classe e um atributo da instância, um atributo da classe é uma atributo que é compartilhado entre todas as instâncias da classe, já um atributo de instância é único para cada instância, por exemplo
 
