@@ -121,7 +121,7 @@ Não vamos entrar agora no `self.__class__.__name__`, pois é um conceito mais c
 print(dog.speak()) # dog.speak(dog)
 ```
 
-Além disso é possível adicionar outros parâmetros após o `self`, como foi feito no `__init__`, o seu funcionamento é idêntico ao [[Argumentos de uma Função|argumento de uma função]].
+Além disso é possível adicionar outros parâmetros após `self`, como foi feito no `__init__`, o seu funcionamento é idêntico ao [[Argumentos de uma Função|argumento de uma função]].
 
 Por último é importante falar sobre a diferença entre um atributo de classe e um atributo da instância, um atributo da classe é uma atributo que é compartilhado entre todas as instâncias da classe, já um atributo de instância é único para cada instância, por exemplo
 

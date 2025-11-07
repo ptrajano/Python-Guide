@@ -61,19 +61,6 @@ PI = 3.141592
 PI *= 2
 ```
 
-É fácil de se perceber que isso é um comportamento indesejado, pois o valor de $\pi$ deve ser constante ao longo de todo código. Um adendo legal de se comentar é que existem certas linguagens, como o `JavaScript` que tem a palavra `const` no seu dicionário, e se caso tentar modificar uma variável que tem essa indicação haverá um erro, porém, esse trecho é válido
-
-```javascript
-const my_array = [1, 2, 3]
-
-my_array[0] = 10
-my_array.push(4)
-
-console.log(my_array) // output: [10, 2, 3, 4] 
-```
-
-O que está acontecendo neste caso é que ele define que o objeto array sempre será constante, porém pode-se modificar seus valores internos. Na nossa definição de constante, isso não poderia.
-
 Além disso, é importante comentar que os nomes, para uma boa legibilidade, devem explicitar exatamente o intuito desse objeto, por exemplo
 
 ```python

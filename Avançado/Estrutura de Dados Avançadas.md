@@ -1,4 +1,4 @@
-Vamos pensar no seguinte problema, como que conseguimos representar um sistema de rodovias no computador, cada rua vai estar ligada a outras ruas, a quantidade de ruas que uma rua ta ligada a outras não é fixa, então a partir disso como conseguimos estruturas nossos dados, o `Python` já nos da várias estruturas de dados padrões como as [[Lista|listas]], [[Dicionário|dicionários]] e [[Set|sets]], mas e para o nosso problema, como conseguimos trabalhar de uma forma clara, obviamente conseguimos usar listas, dicionários ou até conjuntos para conseguir fazer isso, mas fica claro? 
+Vamos pensar no seguinte problema, como que conseguimos representar um sistema de rodovias no computador, cada rua vai estar ligada a outras ruas, a quantidade de ruas que uma rua ta ligada a outras não é fixa, então a partir disso como conseguimos estruturar nossos dados, o `Python` já nos da várias estruturas de dados padrões como as [[Lista|listas]], [[Dicionário|dicionários]] e [[Set|sets]], mas e para o nosso problema, como conseguimos trabalhar de uma forma clara? Obviamente conseguimos usar listas, dicionários ou até conjuntos para fazer isso, mas fica claro? 
 
 ```mermaid
 flowchart TD
@@ -11,7 +11,7 @@ flowchart TD
 ```
 
 
-Este exemplo por exemplo, conseguimos representa-lo usando uma lista
+Neste exemplo por exemplo, conseguimos representa-lo usando uma lista
 
 ```python
 road = [
@@ -291,3 +291,65 @@ class Bit(Enum):
 ```
 
 Essa implementação parece ser mais complexa que ela precisa, mas o intuito dela é minimizar a chance de cometer erros de escrita descrevendo as operações lógicas, além disso o intuito é somente mostrar que é possível construir objetos complexos baseados em uma ligação entre dois valores.
+
+## Classes Abstratas
+
+Essas [[Classes|classes]] são formas de criar um modelo para outras classes, o intuito principal dela é falar quais métodos são obrigatórios nas classes (métodos abstratos sem implementação) que forem herdadas por ela. Elas definem o "esqueleto" das classes filhas. A sua ideia é trazer todos os métodos necessários para que se caso a classe filha for passada para outra classe ([[Herança e Composição#Composição|composição]])
+diminua a questão dos erros.
+
+```python
+from abc import ABC, abstractmethod
+
+class DataBaseConnector(ABC): # ABstract Class
+	@abstractmethod
+	def connect(self):
+		... # sem implementação, funciona como o pass (Ver Intermediário\Ellipsis)
+	
+	@abstractmethod
+	def execute_query(self, query: str, params: tuple = None):
+		...
+		
+	@abstractmethod
+	def close(self):
+		...
+		
+import sqlite3
+		
+class SQLiteConnector(DataBaseConnector):
+	def __init__(self, db_name: str):  
+		self.db_name = db_name  
+		self.connection = None  
+		self.cursor = None  
+		  
+	def connect(self):  
+		try:  
+			self.connection = sqlite3.connect(self.db_name)  
+			self.cursor = self.connection.cursor()  
+			print(f"Connected to SQLite database: {self.db_name}")  
+		except sqlite3.Error as e:  
+			print(f"Error connecting to SQLite database: {e}")  
+	  
+	def execute_query(self, query: str, params: tuple = None):  
+		if not self.connection:  
+			print("Not connected to database. Call connect() first.")  
+			return None  
+		try:  
+			if params:  
+				self.cursor.execute(query, params)  
+			else:  
+				self.cursor.execute(query)  
+				self.connection.commit()  
+			if query.strip().upper().startswith("SELECT"):  
+				return self.cursor.fetchall()  
+			else:  
+				return self.cursor.rowcount  
+		except sqlite3.Error as e:  
+			print(f"Error executing query: {e}")  
+			return None  
+	  
+	def close(self):  
+		if self.connection:  
+			self.connection.close()  
+			print(f"Closed connection to SQLite database: {self.db_name}")
+```
+

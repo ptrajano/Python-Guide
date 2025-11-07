@@ -27,91 +27,34 @@ Aqui conseguimos perceber a primeira coisa, a carreira de um programador não é
 
 Depois de todo o processo de entender o problema e, obviamente, documentar todos os pontos listados, conseguimos de fato a decompor o problema em problemas menores.
 
-### Decomposição
+### **Decomposição do Problema**
 
-É basicamente impossível desenvolver esse projeto, em tempo hábil, tendo apenas um desenvolvedor, pois normalmente coloca-se prazos para que o produto esteja pronto. Por causa disso uma boa prática é decompor o problema em vários sub-problemas de tal forma que várias equipes consigam trabalhar no mesmo projeto sem ter que esperar que outras partes sejam concluídas, ou seja, desenvolver módulos independentes que quando integrados entregam o produto final, a parte de entender o projeto e decompor ele são as partes mais importantes, pois entendendo o escopo e decompondo o projeto consegue-se montar uma estrutura boa para que todos os passos subsequentes fluam de uma forma natural e fácil. Então para o caso do nosso `Spotify`:
+É praticamente impossível desenvolver um projeto complexo como o Spotify em tempo hábil com apenas um desenvolvedor. Para viabilizar o trabalho paralelo de múltiplas equipes, precisamos decompor o problema em sub-problemas menores. Aqui, o [Modelo C4](https://en.wikipedia.org/wiki/C4_model) nos oferece uma metodologia valiosa, especialmente em seu **Nível 2 (Containers)**, onde identificamos os principais aplicativos, serviços, armazenamentos de dados e como eles interagem.
 
-- Módulo de Usuários: login, perfil, preferências, planos
-- Módulo de Músicas: catálogo, metadados, artistas, álbuns
-- Módulo de Playlists: criação, edição, compartilhamento
-- Módulo de Streaming: envio dos arquivos de áudio com qualidade e velocidade
-- Módulo de Recomendação: Aprendizado com o gosto do usuário
-- Módulo de Pagamento: Controle sobre assinaturas e planos
-- Módulo de Análise: Métricas de uso interno ao sistema e externo
+A decomposição resulta em módulos independentes que, quando integrados, entregam o produto final. Entender o escopo e quebrar o projeto nessas unidades é crucial, pois estabelece uma estrutura para que todos os passos subsequentes fluam naturalmente.
 
-Obviamente isso é uma simplificação do problema real, mas partindo disso conseguimos separar em diferentes partes que conseguem ser trabalhadas separadamente, obviamente elas estão ligadas, como por exemplo para recomendar uma música precisa-se saber do usuário e das músicas em si, porém é possível separar em entradas e saídas de cada microsserviço e assim "simular" um sistema completo com as entradas e saídas desejadas.
+**Aplicando a Decomposição (Nível 2 do C4) :**
+- **Serviço de Gerenciamento de Usuários:** login, perfil, preferências, planos    
+- **Serviço de Catálogo de Músicas:** catálogo, metadados, artistas, álbuns
+- **Serviço de Playlists:** criação, edição, compartilhamento
+- **Serviço de Streaming de Áudio:** envio dos arquivos de áudio com qualidade e velocidade
+- **Serviço de Recomendação:** aprendizado com o gosto do usuário
+- **Serviço de Pagamentos:** controle sobre assinaturas e planos
+- **Serviço de Análise:** métricas de uso interno e externo
 
-### Planejar a Arquitetura
+Esta é uma simplificação do problema real, mas ao decompô-lo dessa forma, conseguimos separar o sistema em partes que podem ser trabalhadas em paralelo. Obviamente existem dependências – para recomendar uma música, precisamos conhecer o usuário e o catálogo – mas essas dependências são gerenciadas através de interfaces bem definidas (APIs), permitindo que cada equipe "simule" o sistema completo com base nas entradas e saídas esperadas de cada serviço.
 
-Aqui começas a planejar (em alto nível) a estrutura do software, nessa parte começamos a escolher os [[Design Patterns|padrões de design]] que serão utilizados e, provavelmente mais importante, como os microsserviços vão se [comunicar](https://pt.wikipedia.org/wiki/Interface_de_programa%C3%A7%C3%A3o_de_aplica%C3%A7%C3%B5es), nessa parte desenvolve-se (possivelmente) um pseudocódigo do que cada parte irá fazer, dessa forma conseguimos fazer um sistema escalável e que ao mesmo tempo não tenha dependências do funcionamento interno das outras partes, como define os princípios [[Boas Práticas#SOLID|SOLID]] por exemplo, normalmente começa-se com um projeto simples e, depois que implementado, o sistema é refinado para algo robusto.
+### **Planejamento da Arquitetura com Abordagem C4**
 
-```mermaid
-graph RL
-    %% ===========================
-    %% NODES
-    %% ===========================
-    A[Modulo de Usuarios - Login, Perfil, Planos]
-    B[Modulo de Musicas - Catalogo, Artistas, Albuns]
-    C[Modulo de Playlists - Criacao, Edicao, Compartilhamento]
-    D[Modulo de Streaming - Entrega de Audio]
-    E[Modulo de Recomendacao - Sugestoes Personalizadas]
-    F[Modulo de Pagamento - Assinaturas e Planos]
-    G[Modulo de Analytics - Metricas e Comportamento]
-    H[API Gateway - Integracao entre Servicos]
-    I[Aplicativo / Frontend - Web, Mobile, Desktop]
+Com os componentes identificados, começamos a planejar a arquitetura em alto nível. É aqui que o **Modelo C4** mostra todo seu valor, ajudando-nos a visualizar e planejar como esses microsserviços vão se comunicar e se organizar.
 
-    %% ===========================
-    %% FRONTEND -> API
-    %% ===========================
-    I -->|Requisicoes de usuario| H
+Partimos do **Diagrama de Contexto (Nível 1 do C4)**, que mostra o Spotify como uma caixa única e suas interações com usuários e sistemas externos (como gateways de pagamento). Em seguida, detalhamos esse contexto no **Diagrama de Containers (Nível 2)**, que é justamente o resultado da nossa etapa de decomposição.
 
-    %% ===========================
-    %% API -> MODULOS
-    %% ===========================
-    H -->|Autenticacao e Perfis| A
-    H -->|Consulta de Musicas| B
-    H -->|Gerenciar Playlists| C
-    H -->|Iniciar Streaming| D
-    H -->|Obter Recomendacoes| E
-    H -->|Gerenciar Pagamentos| F
-    H -->|Enviar Dados de Uso| G
+Nesta fase de planejamento:
+- Escolhemos os **padrões de design** e, crucialmente, definimos **como os microsserviços vão se comunicar** (por exemplo, via APIs REST, mensageria com Kafka).
+- Desenvolvemos pseudocódigo e contratos de interface para cada container, garantindo que o sistema seja escalável e respeite princípios como os do **SOLID**, especialmente o de inversão de dependência.
 
-    %% ===========================
-    %% RELACOES ENTRE MODULOS
-    %% ===========================
-    A -->|Preferencias e Historico| E
-    B -->|Metadados das Musicas| E
-    C -->|Listas e Historico de Escuta| E
-    E -->|Sugestoes Personalizadas| H
-
-    D -->|Estatisticas de Reproducao| G
-    A -->|Acoes do Usuario| G
-    B -->|Popularidade de Musicas| G
-    C -->|Tendencias de Playlists| G
-
-    F -->|Status do Plano| A
-    A -->|Dados de Assinatura| F
-
-    %% ===========================
-    %% FEEDBACK LOOP
-    %% ===========================
-    G -->|Insights e Metricas| E
-    G -->|Relatorios de Uso| A
-
-    %% ===========================
-    %% STYLE
-    %% ===========================
-    classDef module fill:#0e7490,stroke:#064e3b,stroke-width:1px,color:#fff,font-weight:bold;
-    classDef infra fill:#334155,stroke:#1e293b,stroke-width:1px,color:#fff,font-weight:bold;
-    classDef ui fill:#475569,stroke:#1e293b,stroke-width:1px,color:#fff,font-weight:bold;
-
-    class A,B,C,D,E,F,G module
-    class H infra
-    class I ui
-
-
-```
-
+Finalmente, ao nos aprofundarmos no **Nível 3 (Componentes)**, planejamos a estrutura interna de cada container, decidindo quais classes, módulos e funções serão necessários. Essa abordagem estruturada garante que, mesmo começando com um projeto simples, o sistema possa ser refinado de forma organizada em algo robusto e de fácil manutenção.
 
 ### Escolha das Tecnologias
 

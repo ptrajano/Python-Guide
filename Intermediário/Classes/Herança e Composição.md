@@ -15,7 +15,7 @@ class Animal:
 		self._sound = None
 	
 	def speak(self):
-		return f'The {self.__class__.__name__} {self.name} of age {self.age} and breed {self.breed}'
+		return f'The {self.__class__.__name__} {self.name} of age {self.age} and breed {self.breed} say {self._sound}'
 		
 
 class Dog(Animal):
@@ -23,10 +23,6 @@ class Dog(Animal):
 		super().__init__(name, breed, age)
 		
 		self._sound = 'Woof'
-		
-	def speak(self):
-		speak_animal = super().speak()
-		return f'{speak_animal}, says {self._sound}!'
 ```
 
 Para fazer uma herança, de outra classe, a classe filha coloca como parâmetro da classe o nome da classe pai. Além disso, neste caso, usamos a palavra [[Funções Nativas#super|super]] para acessar o método `speak` do `Animal` para modificar o comportamento do `speak` do `Dog` ( polimorfismo), além disso o atributo `_sound` foi modificado também.
@@ -67,22 +63,22 @@ class Intern(Student, Worker):
 Neste caso estamos herdando de duas classes. Heranças múltiplas são algo que não é recomendado, pois pode gerar comportamentos inesperados, como por exemplo
 
 ```python
-class A:
+class D:
     def method(self):
-        return "A"
+        return "D"
 
-class B(A):
+class B(D):
     def method(self):
         return "B"
 
-class C(A):
+class C(D):
     def method(self):
         return "C"
 
-class D(B, C):
+class A(B, C):
     pass
     
-print(D().method())
+print(A().method())
 ```
 
 Neste caso, temos várias possibilidades de implementação do `method`, pois 
@@ -210,10 +206,10 @@ class C:
 Aqui é um exemplo extremo, mas vamos supor que temos duas classes que tem o mesmo método, mas com diferentes implementações, com a composições é fácil trabalhar. Além disso é possível introduzir mais de uma classe em uma mesma classe de forma simples
 
 ```python
-class GasolineEngine:
+class GasolineEngine(Engine):
 	...
 	
-class EletricEngine:
+class EletricEngine(Engine):
 	...
 	
 class Car:
@@ -227,4 +223,6 @@ class Car:
 			raise ValueError(f'Invalid engine type: {engine_type}')
 			
 		self.engine = engine_dict[engine_type]()
+		
+
 ```
