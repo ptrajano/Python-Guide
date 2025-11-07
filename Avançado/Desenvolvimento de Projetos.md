@@ -29,7 +29,7 @@ Depois de todo o processo de entender o problema e, obviamente, documentar todos
 
 ### **Decomposição do Problema**
 
-É praticamente impossível desenvolver um projeto complexo como o Spotify em tempo hábil com apenas um desenvolvedor. Para viabilizar o trabalho paralelo de múltiplas equipes, precisamos decompor o problema em sub-problemas menores. Aqui, o [Modelo C4](https://en.wikipedia.org/wiki/C4_model) nos oferece uma metodologia valiosa, especialmente em seu **Nível 2 (Containers)**, onde identificamos os principais aplicativos, serviços, armazenamentos de dados e como eles interagem.
+É praticamente impossível desenvolver um projeto complexo como o Spotify em tempo hábil com apenas um desenvolvedor. Para viabilizar o trabalho paralelo de múltiplas equipes, precisamos decompor o problema em sub-problemas menores. Aqui, o [Modelo C4](https://en.wikipedia.org/wiki/C4_model)([Exemplo](https://github.com/TheKataLog/Celus-Ceals)) nos oferece uma metodologia valiosa, especialmente em seu **Nível 2 (Containers)**, onde identificamos os principais aplicativos, serviços, armazenamentos de dados e como eles interagem.
 
 A decomposição resulta em módulos independentes que, quando integrados, entregam o produto final. Entender o escopo e quebrar o projeto nessas unidades é crucial, pois estabelece uma estrutura para que todos os passos subsequentes fluam naturalmente.
 
